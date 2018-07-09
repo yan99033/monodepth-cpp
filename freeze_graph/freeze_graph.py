@@ -9,6 +9,7 @@ Convert a checkpoint file to a frozen grapth
     self.out = tf.expand_dims(self.disp1[:, :, :, 0], 3, name='output_depth')
 
 NOTE: the code is not tested, because I have done some modifications in the original code. Should you have any problem, feel free to open an issue, I am happy to help.
+It is very likely that you will need to do minor adjustment in order to work properly
 '''
 
 import tensorflow as tf
@@ -17,6 +18,7 @@ from monodepth import *
 # Arguments
 args = tf.app.flags
 args.DEFINE_integer('batch_size', 2, 'The size of of a sample batch')
+args.DEFINE_string('encoder', 'vgg', 'vgg or resnet50')
 args.DEFINE_integer('img_height', 256, 'Image height')
 args.DEFINE_integer('img_width', 512, 'Image width')
 args.DEFINE_string('ckpt_file', '/path/to/monodepth/model/model_city2kitti', 'checkpoint file')
@@ -28,7 +30,7 @@ arg = args.FLAGS
 x = tf.placeholder(tf.float32, shape=[arg.batch_size, arg.img_height, arg.img_width, 3], name='input_image')
 
 # Load model and get output (disparity)
-model = monodepth(arg, x, 'vgg')
+model = monodepth(arg, 'test', x, None)
 y = model.out
 
 # add pb extension if not present
