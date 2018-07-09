@@ -42,7 +42,6 @@ cd build
 ## Use (static/shared) library
 In your own CMakeLists.txt project, do the following:
 
-* Set include directory
 ```
 set(monodepth_INCLUDE_DIRS /path/to/monodepth-cpp/install/include)
 INCLUDE_DIRECTORIES(
