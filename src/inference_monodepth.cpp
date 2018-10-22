@@ -6,13 +6,16 @@
 TODO:
 To test if your Monodepth frozen graph is working properly
 1. create a folder with a bunch of images
-2. set the proper path to your pre-trained model and images directory
-3. define the number of images (in the beginning of for loop)
+2. Set the image height and width
+3. set the proper path to your pre-trained model and images directory
+4. define the number of images (in the beginning of for loop)
 */
 
 int main()
 {
-  monodepth::MonoDepth m(512, 256, "/path/to/monodepth/model/model_city2kitti.pb");
+  int image_width = 1241;
+  int image_height = 376;
+  monodepth::MonoDepth m(image_width, image_height, "/path/to/monodepth/model/model_city2kitti.pb");
   cv::Mat depth;
 
   std::string img_path = "/path/to/image/folder/";
