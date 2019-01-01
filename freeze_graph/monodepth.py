@@ -34,15 +34,8 @@ import math
 class monodepth(object):
     """monodepth model"""
 
-    def __init__(self, param, x, model):
+    def __init__(self, x, model):
         self.use_deconv = False
-
-        # Store pyramid sizes
-        # pyramid = dict()
-
-        # Reconstructed images
-        self.left_est = None
-        self.right_est = None
 
         self.output = self.build_model(x, model)
 

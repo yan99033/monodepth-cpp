@@ -56,7 +56,7 @@ arg = args.FLAGS
 x = tf.placeholder(tf.float32, shape=[arg.batch_size, arg.img_height, arg.img_width, 3], name='input_image')
 
 # Load model and get output (disparity)
-model = monodepth(arg, 'test', x, None)
+model = monodepth(x, arg.encoder)
 y = model.out
 
 # add pb extension if not present
