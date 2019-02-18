@@ -4,7 +4,7 @@ Tensorflow C++ implementation for single image depth estimation
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/monodepth_preview.gif" width="612" height="370">
 </p>
 
-The original work is implemented in Python, [click here](https://github.com/mrharicot/monodepth) to go to their repo. Please cite their work if your find it helpful. I will also be using it for my visual odomtry project dubbed CNN-SVO, [click here](https://github.com/yan99033/CNN-SVO) if you are interested
+The original work is implemented in Python, [click here](https://github.com/mrharicot/monodepth) to go to their repo. Please cite their work if your find it helpful. I will also be using it for my visual odometry project dubbed CNN-SVO, [click here](https://github.com/yan99033/CNN-SVO) if you are interested
 
 It is using pointer-to-implementation technique, so that you can use it in your project without worrying the actual implementation. Refer to [src/inference_monodepth.cpp](https://github.com/yan99033/monodepth-cpp/tree/master/src/inference_monodepth.cpp) for more information
 
