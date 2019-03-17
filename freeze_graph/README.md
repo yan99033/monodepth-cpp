@@ -6,8 +6,9 @@ python freeze_graph.py --encoder resnet --ckpt_file /path/to/trained/model --out
 
 Note: 
 
-* --encoder resnet OR vgg
+* `--encoder resnet OR vgg`
 * There is no extension (e.g., .ckpt) for the checkpoint file 
+* change the file name of the output graph using `--graph output.pb`
 
 # Download the pre-trained frozen graph
 [VGG model](https://drive.google.com/open?id=1yzcndbigENP3kQg6Oioerwvkf_hTotZZ)
