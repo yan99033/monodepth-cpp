@@ -24,17 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-'''
-Convert a checkpoint file to a frozen grapth
-(https://github.com/mrharicot/monodepth)
-
-1. You can either download a pre-trained model or train a model from scratch
+''' Convert a checkpoint file to a frozen grapth
+1. You can either download a pre-trained model (https://github.com/mrharicot/monodepth) or train a model from scratch
 
 2. To make sure the frozen graph has the proper output name, define the 'network output' in build_outputs() method in monodepth_model.py
     e.g., out = tf.expand_dims(self.disp1[:, :, :, 0], 3, name='output_depth')
-
-NOTE: the code is not tested, because I have done some modifications in the original code. Should you have any problem, feel free to open an issue, I am happy to help.
-It is very likely that you will need to do minor adjustment in order to work properly
 '''
 
 import tensorflow as tf
