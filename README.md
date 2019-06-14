@@ -21,7 +21,7 @@ The C++ version is about 28fps, in comparison with Python's 13fps, tested with i
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_kitti_preview.gif" width="723" height="281">
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_final_map.gif" width="723" height="334">
 </p>
-Because DVSO uses both the left disparity and the right disparity outputs, it requires some modification in the source code to enable the disparities outputs.
+Because DVSO uses both the left disparity and the right disparity outputs (for left-right consistency check), it requires some modifications in the source code to enable the disparities outputs.
 
 
 
