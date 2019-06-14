@@ -10,7 +10,7 @@ It is using pointer-to-implementation technique, so that you can use it in your 
 
 The C++ version is about 28fps, in comparison with Python's 13fps, tested with i7 processor and NVidia 1070 graphics laptop
 
-# Personal projects that use monodepth-cpp
+## Personal projects that use monodepth-cpp
 1. [CNN-SVO](https://github.com/yan99033/CNN-SVO) 
 <p align="center">
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/kitti_preview.gif" width="723" height="224">
