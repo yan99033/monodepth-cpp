@@ -16,7 +16,7 @@ The C++ version is about 28fps, in comparison with Python's 13fps, tested with i
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/kitti_preview.gif" width="723" height="224">
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/robotcar_preview.gif" width="723" height="224">
 </p>
-2. DVSO (deep virtual stereo odometry)
+2. Reproducing [DVSO](https://vision.in.tum.de/research/vslam/dvso) (deep virtual stereo odometry)
 <p align="center">
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_kitti_preview.gif" width="723" height="281">
  <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_final_map.gif" width="723" height="334">
