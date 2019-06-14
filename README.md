@@ -1,26 +1,26 @@
 # monodepth-cpp
 Tensorflow C++ implementation for single image depth estimation
 <p align="center">
- <img src="https://github.com/yan99033/monodepth-cpp/blob/master/monodepth_preview.gif" width="612" height="370">
+ <img src="https://github.com/yan99033/monodepth-cpp/blob/master/preview/monodepth_preview.gif" width="612" height="370">
 </p>
 
-The original work is implemented in Python, [click here](https://github.com/mrharicot/monodepth) to go to their repo. Please cite their work if your find it helpful. 
+The original work is implemented in Python, [click here](https://github.com/mrharicot/monodepth) to go to their repo. Please cite their work if your find it helpful.
 
 It is using pointer-to-implementation technique, so that you can use it in your project without worrying the actual implementation. Refer to [src/inference_monodepth.cpp](https://github.com/yan99033/monodepth-cpp/tree/master/src/inference_monodepth.cpp) for more information
 
 The C++ version is about 28fps, in comparison with Python's 13fps, tested with i7 processor and NVidia 1070 graphics laptop
 
 ## Personal projects that use monodepth-cpp
-1. [CNN-SVO](https://github.com/yan99033/CNN-SVO) 
+1. [CNN-SVO](https://github.com/yan99033/CNN-SVO)
 <p align="center">
- <img src="https://github.com/yan99033/monodepth-cpp/blob/master/kitti_preview.gif" width="723" height="224">
- <img src="https://github.com/yan99033/monodepth-cpp/blob/master/robotcar_preview.gif" width="723" height="224">
+ <img src="https://github.com/yan99033/monodepth-cpp/blob/master/preview/kitti_preview.gif" width="723" height="224">
+ <img src="https://github.com/yan99033/monodepth-cpp/blob/master/preview/robotcar_preview.gif" width="723" height="224">
 </p>
-2. Reproducing DVSO
+2. Reproducing [DVSO](https://vision.in.tum.de/research/vslam/dvso) (Deep virtual stereo odometry)
 
 <p align="center">
- <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_kitti_preview.gif" width="723" height="281">
- <img src="https://github.com/yan99033/monodepth-cpp/blob/master/dvso_final_map.gif" width="723" height="334">
+ <img src="https://github.com/yan99033/monodepth-cpp/blob/master/preview/dvso_kitti_preview.gif" width="723" height="281">
+ <img src="https://github.com/yan99033/monodepth-cpp/blob/master/preview/dvso_final_map.gif" width="723" height="334">
 </p>
 Because DVSO uses both the left disparity and the right disparity outputs (for left-right consistency check), it requires some modifications in the source code to enable the disparities outputs.
 
