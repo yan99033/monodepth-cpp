@@ -8,7 +8,10 @@ The original work is implemented in Python, [click here](https://github.com/mrha
 
 It is using pointer-to-implementation technique, so that you can use it in your project without worrying the actual implementation. Refer to [src/inference_monodepth.cpp](https://github.com/yan99033/monodepth-cpp/tree/master/src/inference_monodepth.cpp) for more information
 
-The C++ version is about 28fps, in comparison with Python's 13fps, tested with i7 processor and NVidia 1070 graphics laptop
+The C++ version is about 28fps, in comparison with Python's 13fps, tested with i7 processor and NVidia 1070 graphics laptop.
+
+## Related repo
+If you are looking for single-image relative depth prediction, feel free to check out my other repo, [MiDaS-cpp](https://github.com/yan99033/MiDaS-cpp), a PyTorch C++ implementation of MiDaS.
 
 ## Personal projects that use monodepth-cpp
 1. [CNN-SVO](https://github.com/yan99033/CNN-SVO)
