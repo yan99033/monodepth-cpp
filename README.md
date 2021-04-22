@@ -23,8 +23,10 @@ chmod +x run_tf_docker.sh
 ```
 Note: You may have a better graphics card, and if that's so, go to [tf.Dockerfile](https://github.com/yan99033/monodepth-cpp/tree/master/tf.Dockerfile) line 55 and change the value of `TF_CUDA_COMPUTE_CAPABILITIES` (check out [Nvidia cuda-gpus](https://developer.nvidia.com/cuda-gpus) ).
 ### Option 2
-1. Build Tensorflow library from source, [see here](https://github.com/yan99033/monodepth-cpp/tree/master/Tensorflow_build_instructions)
-2. [Freeze the Tensorflow graph](https://github.com/yan99033/monodepth-cpp/tree/master/freeze_graph) (with known input and output names)
+Build Tensorflow library from source, [see here](https://github.com/yan99033/monodepth-cpp/tree/master/Tensorflow_build_instructions)
+
+### Freeze TF graph
+Either way, you will need to [Freeze a Tensorflow graph](https://github.com/yan99033/monodepth-cpp/tree/master/freeze_graph) (with known input and output names), or download a converted graph [here](https://github.com/yan99033/monodepth-cpp/tree/master/model).
 
 
 ## Configure CMake project
