@@ -6,11 +6,13 @@ find_path(Protobuf_INCLUDE_DIR
         NAMES
         protobuf
         HINTS
-        /usr/local/include/google)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/protobuf/install/include/google
+        ${CMAKE_CURRENT_SOURCE_DIR}/third_party/protobuf/install/include/google   
+        /usr/include/google)
 
 find_library(Protobuf_LIBRARY NAMES protobuf
         HINTS
-        /usr/local/lib)
+        /usr/lib)
 
 # set Protobuf_FOUND
 find_package_handle_standard_args(Protobuf DEFAULT_MSG Protobuf_INCLUDE_DIR Protobuf_LIBRARY)

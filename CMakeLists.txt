@@ -7,16 +7,15 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fPIC")
 
 # Find package
 FIND_PACKAGE(OpenCV REQUIRED)
+FIND_PACKAGE(Eigen3 REQUIRED)
 
 # Find package for TensofFlow
 FIND_PACKAGE(Protobuf REQUIRED)
 FIND_PACKAGE(TensorFlow REQUIRED)
 
-set(EIGEN334_INCLUDE_DIRS /path/to/local/Eigen-3.3.4/local/include/eigen3) # If you decide to build the Eigen library locally, else use 'FIND_PACKAGE()' to locate your Eigen library
-
 INCLUDE_DIRECTORIES(
   include
-  ${EIGEN334_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR}
   ${OpenCV_INCLUDE_DIRS}
   ${PROTOBUF_INCLUDE_DIRS}
   ${TensorFlow_INCLUDE_DIRS}

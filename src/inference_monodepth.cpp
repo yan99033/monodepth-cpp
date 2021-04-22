@@ -41,12 +41,12 @@ int main()
 {
   int image_width = 1241;
   int image_height = 376;
-  monodepth::MonoDepth m(image_width, image_height, "/path/to/monodepth/model/model_city2kitti.pb");
+  monodepth::MonoDepth m(image_width, image_height, "../model/model_city2kitti.pb");
   cv::Mat depth;
 
-  std::string img_path = "/path/to/image/folder/";
+  std::string img_path = "../data/";
 
-  int number_of_images = 1000;
+  int number_of_images = 5;
 
   for (int i=0; i<number_of_images; i++)
   {
@@ -80,7 +80,7 @@ int main()
 
     cv::namedWindow("FULL", CV_WINDOW_AUTOSIZE);
     cv::imshow("FULL", full);
-    cv::waitKey(1);
+    cv::waitKey(100);
   }
 
   return 0;

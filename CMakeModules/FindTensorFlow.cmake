@@ -2,12 +2,22 @@
 
 include(FindPackageHandleStandardArgs)
 
-# For tensorflow 1.6 (include)
-list(APPEND TensorFlow_INCLUDE_DIR /path/to/tensorflow/local/include/google/tensorflow)
-list(APPEND TensorFlow_INCLUDE_DIR /path/to/tensorflow/bazel-tensorflow/external/nsync/public)
+find_path(TensorFlow_base
+        NAMES
+        tensorflow
+        third_party
+        external
+        HINTS
+        /usr/local/include/google/tensorflow
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/tensorflow/local/include/google/tensorflow
+        ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tensorflow/local/include/google/tensorflow)
 
-# For tensorflow 1.6 (libs)
-set(TensorFlow_LIBRARIES /path/to/tensorflow/local/lib/libtensorflow_all.so)
+list(APPEND TensorFlow_INCLUDE_DIR ${TensorFlow_base})
+list(APPEND TensorFlow_INCLUDE_DIR ${TensorFlow_base}/external/nsync/public)
+
+find_library(TensorFlow_LIBRARIES NAMES tensorflow_cc
+        HINTS
+        /usr/local/lib)
 
 # set TensorFlow_FOUND
 find_package_handle_standard_args(TensorFlow DEFAULT_MSG TensorFlow_INCLUDE_DIR TensorFlow_LIBRARIES)

@@ -28,6 +28,7 @@ SOFTWARE.
 #define MONODEPTH_H_
 
 #include <opencv2/opencv.hpp>
+#include <memory>
 
 namespace monodepth {
 
